@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  /* Backgrounds */
+  --background: #faf9f6;
+  --foreground: #001a38;
+  --surface: #ffffff;
+  --surface-secondary: #f1f3f6;
+
+  /* Brand Colors */
+  --navy: #001a38;
+  --navy-light: #012146;
+  --blue: #01325e;
+
+  /* Gold Colors */
+  --gold: #d9a441;
+  --gold-light: #e6b764;
+  --gold-soft: #f2e1bc;
+  --gold-cream: #fdedc2;
+
+  /* Text */
+  --text-primary: #001a38;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-on-dark: #ffffff;
+
+  /* UI */
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #d9a441;
+
+  /* Status */
+  --success: #15803d;
+  --error: #dc2626;
+  --warning: #d9a441;
+
+  /* Radius */
+  --radius: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-alexandria), var(--font-ibm);
+}
+
+/* ///////////////////////////////////////////////////////////////// */
+
+/* hero aimation */
+@theme {
+  --animate-hero-image: hero-image 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-hero-rise: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes hero-image {
+    from {
+      opacity: 0;
+      transform: translateX(-48px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
